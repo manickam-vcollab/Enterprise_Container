@@ -1,0 +1,22 @@
+[
+     {
+        "name": "mohan",
+        "password": "mohan@123",
+        "role": "analyst"
+    },
+    {
+        "name": "srinivas",
+        "password": "srinivas@123",
+        "role": "designer"
+    },
+    {
+        "name": "designer",
+        "password": "designer@123",
+        "role": "designer"
+    },
+    {
+        "name": "analyst",
+        "password": "analyst@123",
+        "role": "analyst"
+    }    
+]

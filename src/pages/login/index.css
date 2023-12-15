@@ -1,0 +1,98 @@
+  .login-container {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    font-family: Roboto;
+    background-color: #f8f9fd;
+  }
+  
+  
+   .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+    margin-left: 310px;
+  
+  }
+  
+  
+  .login-form {
+    width:540px;
+    height: 581px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .list-container {
+    display: flex;
+  }
+  
+  .form {
+    position: absolute;
+    margin-left: 85px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  hr.solid {
+    border-top: 1px solid black;
+    width: 420px;
+    height: 1px;
+    top: 50px;
+  }
+
+ .frame {
+  margin-left: 95px;
+ }
+
+  .paragraph1 {
+    /* width: 117px;
+    height: 24px; */
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    
+  }
+
+  .paragraph2 {
+    font-family: inherit;
+    font-size: 10px;
+    color:rgba(0, 0, 0, 0.61);
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  .title {
+    margin-left: 95px;
+    margin-top: 115px;
+  } 
+
+  .textOnInput {
+    display: flex;
+    position: relative;
+    
+  }
+  
+.textOnInput input {
+    display: flex;
+  order: 1;
+  color: black;
+  width: 350px;
+  
+}
+
+.form-control {
+    box-shadow: none !important;
+    
+    padding: 12px;
+    border:1px solid gray;
+    border-radius: 4px;
+
+}

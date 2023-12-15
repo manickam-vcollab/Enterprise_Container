@@ -1,0 +1,346 @@
+{
+  "menuItems": [
+    {
+      "name": "Geometry",
+      "display": true,
+      "children": [
+        {
+          "name": "Assembly Tree",
+          "display": true,
+          "children": [],
+          "disabled": false
+        },
+        {
+          "name": "Parts List",
+          "display": true,
+          "children": [],
+          "disabled": false
+        },
+        {
+          "name": "Display Mode",
+          "display": true,
+          "children": [],
+          "disabled": false
+        },
+        {
+          "name": "Material Color",
+          "display": false,
+          "children": [],
+          "disabled": false
+        },
+        {
+          "name": "Coordinate System",
+          "display": false,
+          "children": [],
+          "disabled": false
+        },
+        {
+          "name": "Geometry Transform",
+          "display": true,
+          "children": [],
+          "disabled": false
+        }
+      ],
+      "disabled": false
+    }, 
+    {
+      "name": "Camera",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "expanded": false
+    },
+    {
+      "name": "Background",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "expanded": false
+    },
+    {
+      "name": "Axis Triad",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "expanded": false
+    },
+
+    {
+      "name": "Color Map List",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "groupName": "List"
+    },
+    {
+      "name": "Color Map Edit",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Color Palette Edit",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Variable",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "expanded": false
+    },
+    {
+      "name": "Steps & Subcase",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "expanded": false
+    },
+    {
+      "name": "Section & Layer",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Derived Type",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Color Palette",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Value Setting",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Legend Setting",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+
+    {
+      "name": "Clip planes List",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "groupName": "List"
+    },
+    {
+      "name": "Clip plane Settings",
+      "display": false,
+      "children": [],
+      "disabled": false,
+      "groupName": "Settings"
+    },
+    {
+      "name": "Clip plane Transform",
+      "display": false,
+      "children": [],
+      "disabled": false,
+      "groupName": "Transform"
+    },
+    {
+      "name": "Color Map",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Average Options",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Old Labels",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Labels",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Label_Edit",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "2D Notes",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Point Label",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Select Window",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Face Label",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Point to Point",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "3 Point Arc Length",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Label 3D Chart",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "2D Plots",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Transformations",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Animations",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Linear Animation",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Animation Edit",
+      "display": false,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Vector Animation",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Transient",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "View Point",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "3D Slides",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "History",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },    
+    {
+      "name": "Color Theme",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Mouse Controls",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Tool Bar Items",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Tool Bar Position",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Toolbars",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+
+    {
+      "name": "Guides",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "expanded": false
+    },
+    {
+      "name": "Menus",
+      "display": true,
+      "children": [],
+      "disabled": false
+    },
+    {
+      "name": "Add Group",
+      "display": true,
+      "children": [],
+      "disabled": false,
+      "isEditMode": true
+    }
+  ],
+  "activitybarItems": [
+    "Display Mode",
+    "Assembly Tree",
+    "Color Map Edit",
+    "Labels",
+    "Clip planes List",
+    "3D Slides",
+    "Guides"
+  ]
+}
