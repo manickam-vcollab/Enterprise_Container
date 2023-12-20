@@ -130,7 +130,7 @@ export function getDeformationValues(resultId : string, stepId : string, derived
     return viewerMgr.getDeformationValues(resultId, stepId, derivedTypeId, activeViewerID);
 }
 
-export function setLegendData(paletteType : number, colors : number[][], activeViewerID?:string, noResultColor ?: [number, number, number, number]) {
+export function setLegendData(paletteType : string, colors : number[][], activeViewerID?:string, noResultColor ?: [number, number, number, number]) {
     return viewerMgr.setLegendData(paletteType, colors, activeViewerID, noResultColor);
 }
 

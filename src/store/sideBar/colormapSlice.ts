@@ -678,7 +678,7 @@ export const updateStateAsync = createAsyncThunk(
             colorSetValues.push([R,G,B]);      
           });
             //let newColorSet = colorSetValues.slice(1, colorSetValues.length -1);
-            let legendType = (parseInt(paletteType) === LegendType.CONTINUOUS ? 0 : 1)
+            let legendType = (parseInt(paletteType) === LegendType.CONTINUOUS ?  "CONTINUOUS" : "DISCRETE")
             viewerAPIProxy.setLegendData(legendType, colorSetValues, activeViewerID);
             viewerAPIProxy.setAboveMaxColor([aboveMaxColorRGBA.r,aboveMaxColorRGBA.g,aboveMaxColorRGBA.b,aboveMaxColorRGBA.a],  activeViewerID);
             viewerAPIProxy.setBelowMinColor([belowMinColorRGBA.r,belowMinColorRGBA.g,belowMinColorRGBA.b,belowMinColorRGBA.a],  activeViewerID);

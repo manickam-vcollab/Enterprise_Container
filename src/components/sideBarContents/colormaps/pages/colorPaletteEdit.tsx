@@ -372,7 +372,7 @@ export default function ColorPalleteEdit() {
 
   const onHandleApply = () => {
     let legendType =
-      parseInt(legendPaletteType) === LegendType.CONTINUOUS ? 0 : 1;
+      parseInt(legendPaletteType) === LegendType.CONTINUOUS ?  "CONTINUOUS" : "DISCRETE";
     let colorSetValues: any[] = [];
         if (appliedColorPaletteId === activeColorPaletteId) {
           dispatch(

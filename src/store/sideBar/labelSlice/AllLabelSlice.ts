@@ -29,7 +29,7 @@ import {
     setHighlightedNodes,
     getHotspotData,
     add3dLabelforNodeIndex,
-    showHideLabelVisibility
+    showHideLabelVisibility,    
   
   } from "../../../backend/viewerAPIProxy";
 import { Label2DTemplate, Label3DTemplate, LabelProbeTemplate } from 'components/sideBarContents/labels/components/shared/Editor/commonSlatejs';
@@ -44,7 +44,7 @@ import { deleteCoOrdinate, deleteLineChartData, setChartData, setCoOrdinate } fr
 import { delete3DChartData, delete3DChartEditData, set3DChartData } from 'store/chart3DSlice';
 import { batch} from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { setWindowPos,setWindowSize } from '../../windowMgrSlice';
+import { setWindowPos,setWindowSize,setWindowAnchor } from '../../windowMgrSlice';
 import { arrangeLabel } from "store/windowMgrSlice";
 export const windowPrefixId = "Label2D";
 export const windowPrefixIdChart = "CHART3D";
@@ -541,8 +541,9 @@ export const handleLableAnchorPositionUpdate = createAsyncThunk(
     "labelSlice/handleLableAnchorPositionUpdate",
     async(data:any,{dispatch,getState}) => {
         const rootState = getState() as RootState;
+        let viewerId = rootState.app.viewers[rootState.app.activeViewer || ''];
         let { labelId , labelPosition } = data.data.data;  
-        const visibility:any = rootState.label.data[labelId].state.visibility
+        const visibility:any = rootState.label.data[labelId].state.visibility;
         labelPosVisibilityMap.set(labelId, { position : labelPosition, visibility : visibility });
         dispatch(toggleVisibility({
             toShow: false,
@@ -554,23 +555,40 @@ export const handleLableAnchorPositionUpdate = createAsyncThunk(
 
         timer = window.setTimeout(()=>{
             let rootState = getState() as RootState;
-            const state:any = rootState.label;
+            const labelData:any = rootState.label.data;
             batch(() => {
-                labelPosVisibilityMap.forEach((value, key)=>{      
-                    if(key && state && state.data)  {
-                        const label = state.data[key];
-                        dispatch(setLabelPos({id:key,pos:label.pos, anchor:value.position}));
-                        dispatch(toggleVisibility({
-                            toShow : value.visibility,
-                            nodeId : key
-                        }))
-                    }    
-                });
+                Object.values(labelData).forEach((label:any)=>{
+                    let hitPos = get3DLabelCanvasPos(label.id,viewerId) as [number,number];
+                    let p = label.pos;
+                    if(hitPos){
+                        let isInitial = p[0] === 0 && p[1] === 0 ? true : false; 
+                        dispatch(setLabelPos({id:label.id,pos:isInitial?hitPos:p, anchor:hitPos}));
+                        const labelData : any = getLabel3DInfo(label.id, viewerId);
+                        dispatch(setWindowAnchor({uid:'Label2D'+label.id,anchor:labelData.canvasPos}));
+                    }
+                    // dispatch(toggleVisibility({
+                    //             toShow : label.state.visibility,
+                    //             nodeId : label.id,
+                    //              }))
+
+
+                       })
+                // labelPosVisibilityMap.forEach((value, key)=>{      
+                //     if(key && state && state.data)  {
+                //         const label = state.data[key];
+                //         dispatch(setLabelPos({id:key,pos:label.pos, anchor:value.position}));
+                //         dispatch(toggleVisibility({
+                //             toShow : value.visibility,
+                //             nodeId : key
+                //         }))
+                //     }    
+                // });
             });
             timer = null;  
             labelPosVisibilityMap.clear();
         },500);
-});
+}
+);
 
 export const delete3DLabel = createAsyncThunk(
     "labelSlice/delete3DLabel",

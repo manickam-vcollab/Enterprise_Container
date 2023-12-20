@@ -28,7 +28,7 @@ import {
     setSlideStatus,
   } from "store/sideBar/slideSlice";
 
-function Viewer(){
+function Viewer(props:any){
     
     const viewerRefs = createRef<HTMLDivElement>();
     //const viewerDomID = nextId("vct-viewer-");
@@ -246,8 +246,10 @@ function Viewer(){
             }
 
 
-            let viewerID = viewerAPIProxy.createViewer(viewerDivID);
+            let viewerID = viewerAPIProxy.createViewer(viewerDivID,true);
             dispatch(addViewer({name : viewerDomID, id: viewerID }));
+            if(props.onLoad)
+            props.onLoad(viewerID);
             loadModel(api, url, viewerID);
       }
 

@@ -126,7 +126,7 @@ const handleSelectChange = (newValue : string, valueType: string ,undoable:boole
         paletteTypeUndoRedo(newValue , undoable);
         setPaletteType(newValue);
         let colorSetValues = getComputedValueSet();
-        let legendType = (parseInt(newValue) === LegendType.CONTINUOUS ? 0 : 1)
+        let legendType = (parseInt(newValue) === LegendType.CONTINUOUS ?  "CONTINUOUS" : "DISCRETE")
         //let newColorSet = colorSetValues.slice(1, colorSetValues.length -1);
         viewerAPIProxy.setLegendData(legendType, colorSetValues, activeViewerID);
 

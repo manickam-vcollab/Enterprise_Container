@@ -253,7 +253,7 @@ export default function ColorPalette() {
         })
       );
 
-      let legendType = (parseInt(legendPaletteType) === LegendType.CONTINUOUS ? 0 : 1)
+      let legendType = (parseInt(legendPaletteType) === LegendType.CONTINUOUS ? "CONTINUOUS" : "DISCRETE")
       let colorSetValues:any[] = [];
 
       colorSet.forEach(data => {

@@ -1,0 +1,36 @@
+
+  .panel {
+    border:1px solid rgb(159, 159, 159);
+
+  }
+  .ResizeHandleOuter {
+    flex: 0 0 0.6em;
+    position: relative;
+    --background-color: transparent;
+  }
+  .ResizeHandleOuter[data-resize-handle-active] {
+
+    background-color: rgb(159, 159, 159);
+    border-radius: 0.25em;
+
+  }
+  .ResizeHandleInner {
+    position: absolute;
+    top: 0.40em;
+    bottom: 0.40em;
+    left: 0.20em;
+    right: 0.20em;
+    background-color: rgb(159, 159, 159);
+    width:0.3em;
+  }
+  
+  .Icon {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    top: calc(50% - 0.5rem);
+    transform: rotate(90deg);
+  }
+
+  

@@ -98,7 +98,7 @@ export enum Routes {
     TOOLBARPOSITION = "/toolbar/toolbarposition",
 
     ABOUT = "/about",
-  ABOUTPAGE="/about/aboutpage",
+    ABOUTPAGE="/about/aboutpage",
     SUGGEST='/about/suggest',
     WHATSNEW='/about/whatsnew',
     TERMS='/about/terms',
